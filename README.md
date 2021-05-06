@@ -95,7 +95,7 @@
   **PraNet** [[github]](https://github.com/DengPingFan/PraNet) [[paper]](https://arxiv.org/abs/2006.11392)                    
   **RFBNet** [[github]](https://github.com/ruinmessi/RFBNet) [[paper]](https://arxiv.org/abs/1711.07767)                 
   **RAS-pytorch** [[github]](https://github.com/ShuhanChen/RAS-pytorch) [[paper]](https://arxiv.org/abs/1807.09940)             
-#### Thanks for their amazing works.  
+#### 👏🏻 Thanks for their amazing works.  
 
 
 
