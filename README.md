@@ -2,9 +2,19 @@
 ## DarkraNet Architecture
 <p align="center"> <img src='framework.png' align="center" height="400px"> </p> 
 
+## Results
+
 ## Usage
 
-### 1.  Data download
+### 1.  Clone this repository
+
+```
+git clone https://github.com/r08945002/DarkraNet.git
+cd DarkraNet
+```
+
+
+### 2.  Data download
 
 - Training data:
   
@@ -32,7 +42,7 @@
 
 
 
-### 2.  Training
+### 3.  Training
 
 - Download the pretrained weight of the encoder (DarkNet53):
 
@@ -51,7 +61,7 @@
   > Be sure there is a folder called `Polyp_dataset` under the root directory of your local repository.
 
 
-### 3.  Testing
+### 4.  Testing
 
 - Download the best weight of DarkraNet we trained:
 
@@ -70,7 +80,7 @@
   > You can also put your best model weight path in `test_segmentation.py` line 70.       
   > Besides, be sure you have install `scipy==1.2.1`.
 
-### 3.  Evaluation
+### 5.  Evaluation
 
 - After predicting segmentation maps, you can run the following command to evaluate the performance of DarkraNet:
 
@@ -78,8 +88,10 @@
   python3 eval.py
   ```
 
+### 6.  Demo on colonoscopy video
 
-### 4.  Speed
+
+### 7.  Speed
 
 - Test the speed of DarkraNet:
 
