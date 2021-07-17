@@ -76,8 +76,8 @@ cd DarkraNet
   python3 test_segmentation.py
   ```
   > ⚠️ ***IMPORTANT NOTE*** ⚠️  
-  > Make sure your have copied the `NBI` folder to the `TestDataset` folder so that you can predict the result of  `NBI` dataset. 
-  >  You can also put your best model weight path in `test_segmentation.py` line 70.       
+  > Make sure your have copied the `NBI` folder to the `TestDataset` folder so that you can predict the result of  `NBI` dataset.     
+  > You can also put your best model weight path in `test_segmentation.py` line 70.       
   
 
 ### 5.  Evaluation
