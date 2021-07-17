@@ -66,7 +66,7 @@ cd DarkraNet
 - Download the best weight of DarkraNet we trained:
 
   ```
-  wget DarkraNet_best.pth 'https://www.dropbox.com/s/20azii02eikpm3h/DarkraNet_best.pth'
+  wget DarkraNet_final.pth 'https://www.dropbox.com/s/p4c2ysby8p14ucv/DarkraNet_final.pth'
   ```
 
 - Start testing:
@@ -78,7 +78,7 @@ cd DarkraNet
   > ⚠️ ***IMPORTANT NOTE*** ⚠️  
   > Make sure your have copied the `NBI` folder to the `TestDataset` folder so that you can predict the result of  `NBI` dataset. 
   > You can also put your best model weight path in `test_segmentation.py` line 70.       
-  > Besides, be sure you have install `scipy==1.2.1`.
+  
 
 ### 5.  Evaluation
 
