@@ -6,13 +6,14 @@ import numpy as np
 import random
 import torch
 import argparse
-from scipy import misc
 import torch.nn.functional as F
 import warnings
 from dataloader import PolypDataset
 from seg_model import DarkraNet
+import matplotlib.pyplot as plt
+from skimage.filters import threshold_otsu
 
-# fix random seeds for reproducibility
+fix random seeds for reproducibility
 SEED = 1122
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
@@ -66,7 +67,7 @@ def predict(args):
 
 
     model = DarkraNet()
-    model.load_state_dict(torch.load('DarkraNet_best.pth')) # put your best model path
+    model.load_state_dict(torch.load('DarkraNet_final.pth')) # put your best model path
 
     model.to(DEVICE)
     model.eval()
@@ -90,11 +91,14 @@ def predict(args):
             res = res5 + res2
             res = torch.div(res, 2)
 
-            res = F.upsample(res, size=gt.shape, mode='bilinear', align_corners=False)
+            res = F.upsample(res, size=gt.shape, mode='bicubic', align_corners=False)
             res = res.sigmoid().data.cpu().numpy().squeeze()
             res = (res - res.min()) / (res.max() - res.min() + 1e-8)
+            thresh = threshold_otsu(res)
+            binary = res > thresh
+            plt.imsave(os.path.join(save_path, name), binary, cmap=plt.cm.gray)
 
-            misc.imsave(os.path.join(save_path, name), res)
+
 
     print('\nDone !')
 
