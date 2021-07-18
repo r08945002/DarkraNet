@@ -13,7 +13,7 @@ from seg_model import DarkraNet
 import matplotlib.pyplot as plt
 from skimage.filters import threshold_otsu
 
-fix random seeds for reproducibility
+# fix random seeds for reproducibility
 SEED = 1122
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
