@@ -76,7 +76,7 @@ cd DarkraNet
   python3 test_segmentation.py
   ```
   > ⚠️ ***IMPORTANT NOTE*** ⚠️  
-  > Make sure your have copied the `NBI` folder to the `TestDataset` folder so that you can predict the result of  `NBI` dataset.     
+  > Make sure you have copied the `NBI` folder to the `TestDataset` folder so that you can predict the result of  `NBI` dataset.     
   > You can also put your best model weight path in `test_segmentation.py` line 70.       
   
 
@@ -89,6 +89,15 @@ cd DarkraNet
   ```
 
 ### 6.  Demo on colonoscopy video
+
+- You can also run the following command to evaluate the performance of DarkraNet on colonoscopy video:
+
+  ```
+  python3 video_segmentation.py --video_name=your_video_name.mp4
+  ```
+  > ⚠️ ***IMPORTANT NOTE*** ⚠️  
+  > Download some colonoscopy videos [[download here]](http://www.depeca.uah.es/colonoscopy_dataset/) and move it into the same path as this repository.
+  > Then put your video name in `--video_name`.     
 
 
 ### 7.  Speed
