@@ -2,7 +2,6 @@
 ## DarkraNet Architecture
 <p align="center"> <img src='framework.png' align="center" height="400px"> </p> 
 
-## Results
 
 ## Usage
 
